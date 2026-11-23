@@ -143,7 +143,12 @@ h2 { font: clamp(3.5rem, 7vw, 7.15rem)/.95 var(--display); letter-spacing: -.035
 .photo-frame img { width: 100%; height: auto; max-height: min(68vh, 850px); object-fit: contain; }
 .photo-frame figcaption { text-align: center; margin-top: 8px; }
 .viewer-controls { display: flex; justify-content: center; gap: 10px; margin-top: 8px; }
-.film-player { background: #0d0b0a; aspect-ratio: 16 / 9; }
+.film-player {
+  width: min(100%, calc((100dvh - 150px) * 1.7778));
+  margin-inline: auto;
+  background: #0d0b0a;
+  aspect-ratio: 16 / 9;
+}
 .film-player iframe { display: block; width: 100%; height: 100%; border: 0; }
 #film-external { display: inline-block; margin-top: 12px; }
 

@@ -71,7 +71,7 @@ for (const card of document.querySelectorAll(".film-card")) {
   card.addEventListener("click", (event) => {
     if (!shouldOpenDialog(event, filmDialog)) return;
     event.preventDefault();
-    filmTitle.textContent = card.querySelector(".film-name").textContent.trim();
+    filmTitle.textContent = card.querySelector(".film-name").firstChild.textContent.trim();
     filmExternal.href = card.href;
 
     const player = document.createElement("iframe");
