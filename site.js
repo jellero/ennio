@@ -8,6 +8,7 @@ filters.hidden = false;
 for (const button of filterButtons) {
   button.addEventListener("click", () => {
     const category = button.dataset.filter;
+    gallery.dataset.filter = category;
     for (const filter of filterButtons) {
       filter.setAttribute("aria-pressed", String(filter === button));
     }
